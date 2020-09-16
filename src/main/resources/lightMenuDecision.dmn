@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_1919rdo" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.6.0">
+  <decision id="lightMenuDecision" name="Decision on Light Menu">
+    <decisionTable id="decisionTable_1" hitPolicy="FIRST">
+      <input id="input_1" label="Weather Condition">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>weather</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1wxrt96" label="Forecast Certainty">
+        <inputExpression id="LiteralExpression_0shi4l1" typeRef="integer">
+          <text>certainty</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Light Menu Proposal" name="lightMenuOffered" typeRef="boolean" />
+      <rule id="DecisionRule_048soik">
+        <inputEntry id="UnaryTests_1dlhnr4">
+          <text>"cloudy"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mpy6y1">
+          <text>&gt;=60</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wu5ga9">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cufqnx">
+        <inputEntry id="UnaryTests_12u4xz0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h6jzya">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jh4cub">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
